@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../ResyForm/ResyForm.css'
 
 class ResyForm extends Component {
   constructor() {
@@ -11,13 +12,18 @@ class ResyForm extends Component {
     }
   }
 
+  adjustState = (property, newValue) => {
+    return this.setState({ [property]: newValue })
+  }
+
   render () {
     return (
       <form>
-        <input type="text"></input>
-        <input type="date"></input>
-        <input type="text"></input>
-        <input type="number"></input>
+        <input type="text" placeholder="Name"></input>
+        <input type="text" placeholder="Date (mm/dd)"></input>
+        <input type="text" placeholder="Time"></input>
+        <input type="number" placeholder="Number of Guests" min="1"></input>
+        <button onClick={ this.props.addResy }>Make a Reservation</button>
       </form>
     )
   }
