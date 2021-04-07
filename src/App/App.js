@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ResyForm from '../ResyForm/ResyForm';
 import ResyContainer from '../ResyContainer/ResyContainer'
+import getResys from '../api-calls'
 import './App.css';
 
 class App extends Component {
@@ -12,7 +13,8 @@ class App extends Component {
   }
 
   componentDidMount () {
-    
+    getResys()
+      .then(result => this.setState({ reservations: result }))
   }
 
   render() {
