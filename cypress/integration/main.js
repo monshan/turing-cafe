@@ -26,7 +26,7 @@ describe('MVP functionality', () => {
   })
 
   it('Should be able to interact with form accurately', () => {
-    cy.get('form > ')
+    cy.get('form > #name').type('Connor')
   })
 
   it('Should be able to add a reservation accurately', () => {

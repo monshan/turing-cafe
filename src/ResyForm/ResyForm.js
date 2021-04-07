@@ -46,10 +46,10 @@ class ResyForm extends Component {
   render () {
     return (
       <form>
-        <input type="text" placeholder="Name" name="name" onChange={ this.adjustState }></input>
-        <input type="text" placeholder="Date (mm/dd)" name="date" onChange={ this.adjustState }></input>
-        <input type="text" placeholder="Time" name="time" onChange={ this.adjustState }></input>
-        <input type="number" placeholder="Number of Guests" min="1" name="number" onChange={ this.adjustState }></input>
+        <input type="text" placeholder="Name" name="name" id="name" onChange={ this.adjustState }></input>
+        <input type="text" placeholder="Date (mm/dd)" name="date" id="date" onChange={ this.adjustState }></input>
+        <input type="text" placeholder="Time" name="time" id="time" onChange={ this.adjustState }></input>
+        <input type="number" placeholder="Number of Guests" min="1" name="number" id="number" onChange={ this.adjustState }></input>
         <button onClick={ (e) => this.sendUp(e) }>Make a Reservation</button>
       </form>
     )
