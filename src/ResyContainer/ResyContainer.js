@@ -1,14 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Card from '../ResyCard/ResyCard'
-// class ResyContainer extends Component {
-//   constructor() {
-//     super();
-//   }
-
-//   render () {
-
-//   }
-// }
+import '../ResyContainer/ResyContainer.css'
 
 const ResyContainer = (props) => {
   const generateCard = props.reservations.map(resy => {
@@ -21,7 +13,7 @@ const ResyContainer = (props) => {
   });
 
   return (
-    <div>
+    <div className="resy-container">
       { generateCard }
     </div>
   )
