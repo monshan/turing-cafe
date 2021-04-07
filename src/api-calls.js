@@ -3,4 +3,11 @@ const getResys = () => {
     .then(response => response.json())
 }
 
+// const postResys = () => {
+//   return {
+//     method: 'POST',
+//     content
+//   }
+// }
+
 export default getResys;

@@ -8,13 +8,15 @@ class App extends Component {
   constructor () {
     super();
     this.state = {
-      reservations: null
+      reservations: []
     }
   }
 
   componentDidMount () {
     getResys()
-      .then(result => this.setState({ reservations: result }))
+      .then(result => {
+        console.log(result[0])
+        return this.setState({ reservations: result })})
   }
 
   render() {

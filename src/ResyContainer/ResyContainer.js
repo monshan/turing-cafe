@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Card from '../ResyCard/ResyCard'
 // class ResyContainer extends Component {
 //   constructor() {
 //     super();
@@ -9,8 +10,8 @@ import React, { Component } from 'react';
 //   }
 // }
 
-const ResyContainer = () => {
-  const generateCard = '';
+const ResyContainer = (props) => {
+  const generateCard = props.resys;
 
   return (
     <div>
