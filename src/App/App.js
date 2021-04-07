@@ -27,7 +27,7 @@ class App extends Component {
           <ResyForm />
         </div>
         <div className='resy-container'>
-          <ResyContainer />
+          <ResyContainer reservations={ this.state.reservations }/>
         </div>
       </div>
     )

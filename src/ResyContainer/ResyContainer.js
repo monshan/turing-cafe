@@ -11,7 +11,14 @@ import Card from '../ResyCard/ResyCard'
 // }
 
 const ResyContainer = (props) => {
-  const generateCard = props.resys;
+  const generateCard = props.reservations.map(resy => {
+    return <Card 
+      name={resy.name}
+      date={resy.date}
+      time={resy.time}
+      number={resy.number}
+      />
+  });
 
   return (
     <div>
