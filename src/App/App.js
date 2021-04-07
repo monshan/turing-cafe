@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import ResyForm from '../ResyForm/ResyForm'
+import ResyForm from '../ResyForm/ResyForm';
+import ResyContainer from '../ResyContainer/ResyContainer'
 import './App.css';
 
 class App extends Component {
@@ -11,7 +12,7 @@ class App extends Component {
           <ResyForm />
         </div>
         <div className='resy-container'>
-          
+          <ResyContainer />
         </div>
       </div>
     )
