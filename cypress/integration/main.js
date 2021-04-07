@@ -27,9 +27,28 @@ describe('MVP functionality', () => {
 
   it('Should be able to interact with form accurately', () => {
     cy.get('form > #name').type('Connor')
+    cy.get('form > #name').should('have.value', 'Connor')
+    cy.get('form > #date').type('06/12')
+    cy.get('form > #date').should('have.value', '06/12')
+    cy.get('form > #time').type('8:00')
+    cy.get('form > #time').should('have.value', '8:00')
+    cy.get('form > #number').type('4')
+    cy.get('form > #number').should('have.value', '4')
   })
 
   it('Should be able to add a reservation accurately', () => {
-
+    cy.get('form > #name').type('Connor')
+    cy.get('form > #date').type('06/12')
+    cy.get('form > #time').type('8:00')
+    cy.get('form > #number').type('4')
+    cy.get('form > button').click()
+    cy.get('.resy-container article:last')
+      .contains('Connor')
+    cy.get('.resy-container article:last')
+      .contains('06/12')
+    cy.get('.resy-container article:last')
+      .contains('8:00 pm')
+    cy.get('.resy-container article:last')
+      .contains('Number of guests: 4')
   })
 })
