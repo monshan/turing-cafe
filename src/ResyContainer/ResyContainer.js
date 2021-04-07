@@ -4,11 +4,12 @@ import '../ResyContainer/ResyContainer.css'
 
 const ResyContainer = (props) => {
   const generateCard = props.reservations.map(resy => {
-    return <Card 
-      name={resy.name}
-      date={resy.date}
-      time={resy.time}
-      number={resy.number}
+    return <Card
+      key={ resy.id }  
+      name={ resy.name }
+      date={ resy.date }
+      time={ resy.time }
+      number={ resy.number }
       />
   });
 
