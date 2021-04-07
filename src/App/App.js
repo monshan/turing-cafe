@@ -4,6 +4,17 @@ import ResyContainer from '../ResyContainer/ResyContainer'
 import './App.css';
 
 class App extends Component {
+  constructor () {
+    super();
+    this.state = {
+      reservations: null
+    }
+  }
+
+  componentDidMount () {
+    
+  }
+
   render() {
     return (
       <div className="App">
